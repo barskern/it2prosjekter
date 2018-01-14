@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+-->
+<html lang="nb">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Heldagsprøve 7. april 2016</title>
+		
+		<link rel="stylesheet" type="text/css" href="stiler.css">
+		<script src="libs/TweenMax.min.js"></script>
+		<script src="libs/eksamenslib.js"></script>
+		<script src="skript.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="pres-bil--container">
+				<h2>HELT NY FORD KUGA</h2>
+				<div id="pres-kuga" class="pres-bil">
+					<div id="neste" class="pres-bil--knapp">></div>
+					<div id="forrige" class="pres-bil--knapp"><</div>
+				</div>
+				<p><strong><em>Bla i framvisningen for å finne ut mer om den nye Ford Kuga!</em></strong></p>
+			</div>
+			<hr>
+			<div class="kalk--container">
+				<h3>Auto start-stop gir mange fordeler!</h3>
+				<p>
+					Mange Ford-modeller har gode teknologier for å hjelpe deg spare penger. Vår Auto start-stop kan
+					nettopp fylle opp sparegrisen litt mer enn vanlig. Prøv ut kalkulatoren og se hvor mye <strong>du</strong> hadde spart
+					spart på å ha kjørt i en Ford akkurat nå.
+				</p>
+				<div class="kalk">
+					<p>
+						<label for="inn_kjoring" class="kalk--label">Velg hvordan du kjører</label>
+						<select id="inn_kjoring">
+							<option value="0.10" selected>Bykjøring</option>
+							<option value="0.05">Blandet kjøring</option>
+						</select>
+					</p>
+					<p>
+						<label for="inn_lengde" class="kalk--label">Kjørelengde i km</label>
+						<input type="text" id="inn_lengde" class="kalk--inn" value="240"/> km
+					</p>
+					<p>
+						<label for="inn_pris" class="kalk--label">Drivsstoffpris</label>
+						<input type="text" id="inn_pris" class="kalk--inn" value="10"/> kr/liter
+					</p>
+				</div>
+				<p>Hvis du hadde kjørt en Ford med Auto start-stop, hadde du spart <strong><span id="ut_svar">0</span> kr!</strong></p>
+			</div>
+			<hr>
+			<div class="finn-prisen--container">
+                <form id="form_finn_prisen">
+                    <h3>Finn prisen på på det du vil ha!</h3>
+                    <p>
+                        Vi i Ford ønsker å gi deg en bil som er skreddersydd dine behov. Derfor har vi gjort det enkelt for deg å velge
+                        nettopp det du har lyst til. Prøv deg frem under og finn din Ford.
+                    </p>
+                    <p>
+                        <label for="inn_biler">Merke: </label>
+                        <select id="inn_biler">
+                            <option disabled selected>Velg en Ford</option>
+                        </select>
+                    </p>
+                    <p>
+                        <em>Velg en av de to ulike variantene:</em>
+                    </p>
+                    <p>
+                        <input id="inn_variant_tre" name="variant" type="radio" value="tre" />
+                        <label for="inn_variant_tre">Trend (<span id="ut_pris_tre">0</span>,-)</label>
+                        <input id="inn_variant_tit" name="variant" type="radio" value="tit" />
+                        <label for="inn_variant_tit">Titanium (<span id="ut_pris_tit">0</span>,-)</label>
+                    </p>
+                    <hr>
+                    <p><em>Velg hvilke tilleggspakker du vil ha:</em></p>
+                    <p>
+                        <input id="inn_familie" type="checkbox" />
+                        <label for="inn_familie">Familiepakke (<span id="ut_pris_familie">0</span>,-)</label>
+                    </p>
+                    <p>
+                        <input id="inn_forerass" type="checkbox" />
+                        <label for="inn_forerass">Førerassistanse (<span id="ut_pris_forerass">0</span>,-)</label>
+                    </p>
+                    <p>
+                        <input id="inn_stil" type="checkbox" />
+                        <label for="inn_stil">Stilpakke (<span id="ut_pris_stil">0</span>,-)</label>
+                    </p>
+                    <hr>
+                    <p>Totalpris: <strong><span id="ut_totalpris">0</span> kroner</strong></p>
+                </form>
+			</div>
+			<hr>
+		</main>
+	</body>
+</html>

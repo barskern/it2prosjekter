@@ -1,0 +1,158 @@
+
+header {
+    background: url(../bilder/TwinTowers.jpg) center center;
+    background-size: cover;
+}
+
+footer {
+    background: url(../bilder/OLRinger.svg) center center no-repeat;
+    background-size: contain;
+}
+
+
+/*Tilhører oppgave 1 "Spydkast"*/
+
+#spydkast {
+    position: relative;
+    box-shadow: black 2px 2px 10px;
+    margin: 0 auto;
+    width: 500px;
+    height: 700px;
+    background: url(../bilder/VintagePaper.jpg);
+    font-family: Georgia, serif;
+}
+
+#spydkast button {
+    background-image: url(../bilder/VintagePaper.jpg);
+    font-family: Georgia, serif;
+    padding: 0.6em;
+    width: 7em;
+}
+
+#flex1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#knapper1 {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#tekst1 {
+    padding-top: 1em;
+    width: 400px;
+}
+
+
+/*Tilhører oppgave 2 "AndreasTorkildsen Video"*/
+
+#andreas {
+    margin: 0 auto;
+    width: 320px;
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    background: grey;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+    transition: opacity 1s;
+    opacity: 0.8;
+    text-shadow: black 1px 1px 3px;
+    color: white;
+}
+
+#overlay > h3, #overlay > p {
+    text-align: center;
+    width: 80%;
+    margin: 2em auto 1em auto;
+}
+
+#overlay > input {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+/*Tilhører oppgave 3 "Resultattabell"*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabellogpiler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.tabellogpiler > * {
+    margin: 5px;
+}
+
+.pil {
+    border: 10px solid whitesmoke;
+}
+
+.sirkelpil {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(transparent, grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.sirkelpil:hover {
+    transform: translate(2px,2px);
+}
+
+.resultat_tabell, .resultat_tabell tr, .resultat_tabell td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.resultat_tabell tr:first-child td, .resultat_tabell tr:nth-child(2) td {
+    font-weight: bold;
+    padding: 0.2em !important;
+}
+
+.resultat_tabell tr:first-child td {
+    text-align: center;
+}
+
+.resultat_tabell td {
+    padding: 0;
+}
+
+.resultat_tabell td input {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    padding: 0.2em;
+}
+
+.resultat_tabell td input[type="number"] {
+    width: 4em;
+}
+
+#knapper2 {
+    margin-top: 0.3em;
+}
+

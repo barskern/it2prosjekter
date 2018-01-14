@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+-->
+<html lang="nb">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lektorprogramet ved NTNU</title>
+
+		<script src="libs/eksamenslib.js"></script>
+		<script src="libs/TweenMax.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="stiler.css">
+		<script src="skript.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="banner" class="banner">
+				<div id="banner--tekst" class="banner--tekst"></div>
+
+				<svg id="banner--lyd-veksler" class="banner--lyd-veksler" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid meet">
+					<path class="lyd-veksler--spill" d="M0 0 L1 0.5 L0 1 Z" />
+					<path class="lyd-veksler--pause" d="M0 0 L0.25 0 L0.25 1 L0 1 Z M0.75 0 L1 0 L1 1 L0.75 1 Z" />
+				</svg>
+				<audio id="banner--lyd" autoplay loop>
+					<source src="lyder/banner_mix.mp3">
+				</audio>
+			</div>
+		</header>
+		<main>
+			<div class="studiekalk">
+				<div style="background-color: rgba(255,255,255,0.8);padding:4px;border-radius:4px;">
+					<h2>Studie-kalkulator</h2>
+					<h4>Kan du komme inn på studiet du vil?</h4>
+					<p>
+						Poenggrenser fra 2014:
+						<select id="studiekalk--select-grense">
+							<option value="" selected disabled>Velg en studieretning</option>
+						</select>
+					</p>
+					<p>Men en gjennomsnittskarakter på
+						<input id="studiekalk--inn-kar" type="text" maxlength="3" placeholder="0" /> og
+						<input id="studiekalk--inn-bonus" type="text" maxlength="3" placeholder="0"/> bonuspoeng, så
+						<strong><span id="studiekalk--ut-svar">kan du</span></strong> komme inn på et studie som har en poenggrense på
+						<input id="studiekalk--inn-grense" type="text" maxlength="4" placeholder="0" /> studiepoeng. Skriv inn
+						poenggrensen selv <i>eller</i> velg en studieretning fra menyen over.
+					</p>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

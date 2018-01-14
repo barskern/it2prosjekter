@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+-->
+<html lang="nb">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Konkurranse TV</title>
+
+		<link rel="stylesheet" type="text/css" href="stiler.css">
+
+		<script src="libs/EasePack.min.js"></script>
+		<script src="libs/CSSPlugin.min.js"></script>
+		<script src="libs/TweenLite.min.js"></script>
+		<script src="skript.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<h1 class="text-right-padding">Konkurranser for TV-programmer</h1>
+		</header>
+		<main id="main">
+			<div class="skinkevekt">
+				<img width="250" src="bilder/gradskive.png" class="skinkevekt--vekt--skala" />
+				<div class="skinkevekt--vekt">
+					<img class="skinkevekt--vekt--skinke" src="bilder/skinke.png" />
+					<div class="skinkevekt--vekt--pil"></div>
+					<img class="skinkevekt--vekt--boette" src="bilder/sinkboette.png" />
+				</div>
+				<div class="skinkevekt--text">
+					<h2 class="text-right">Kan du gjette hvor mye skinken veier?</h2>
+					<p class="text-right">
+						Målet ditt er å finne vekten til skinken
+						gjennom å helle ulike mengder vann i bøtta og se hvordan det går.
+					   Kan du finne ut hvor mye skinken veier?
+					</p>
+					<input placeholder="0" id="skinkevekt--text--input" class="text-right" type="number" min="0" />
+					<p id="skinkevekt--text--resultat"></p>
+					<div class="skinkevekt--text--gjettninger" id="skinkevekt--text--gjettninger"></div>
+				</div>
+			</div>
+		</main>
+		<footer id="footer"></footer>
+	</body>
+</html>

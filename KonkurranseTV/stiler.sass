@@ -1,0 +1,125 @@
+/*Base
+
+body
+  margin: 0
+  padding: 0
+  font-family: sans-serif
+
+
+/*Layout
+
+#header
+  position: fixed
+  width: 100%
+  height: 100px
+  background-color: cornsilk
+
+
+#main
+  padding-top: 100px
+  background-color: antiquewhite
+  min-height: 100vh
+  box-sizing: border-box
+
+/*Modules
+
+.text-right
+  text-align: right
+  &-padding
+    @extend .text-right
+    padding-right: 7%
+
+
+.skinkevekt
+  position: relative
+  margin: 100px auto 0 auto
+  width: 440px
+  height: 440px
+
+  &--vekt
+    position: relative
+    width: 90%
+    height: 20px
+    top: 20px
+    margin: 0 auto 200px auto
+    transform-origin: center center
+    background-color: brown
+
+    &:before,&:after
+      content: "J"
+      font-family: "Times New Roman", serif
+      position: absolute
+      font-size: 76px
+      top: 0
+
+    &:before
+      left: 20px
+    &:after
+      right: 20px
+
+    &--pil
+      position: absolute
+      left: 50%
+      bottom: 0
+      width: 6px
+      height: 70px
+      background-color: inherit
+      transform: translate(-50%,100%)
+
+      &:before
+        content: ''
+        position: absolute
+        top: -5px
+        left: 50%
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        background-color: sandybrown
+        transform: translate(-50%,-100%)
+
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 0
+        height: 0
+        box-sizing: border-box
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-top: 10px solid brown
+        transform: translate(0,100%)
+
+
+    &--skala
+      position: absolute
+      top: 35%
+      left: 50%
+      transform: translate(-50%,-50%)
+
+
+    &--skinke
+      position: absolute
+      left: 30px
+      top: 60px
+      transform-origin: 51.4% 3.8% //translate(-38.6%,-6%) //translate(-51.4%,-3.8%)
+      z-index: 20
+
+
+    &--boette
+      position: absolute
+      right: 30px
+      top: 60px
+      transform-origin: 51.4% 3.8% //translate(48.2%,-3.8%) //translate(-51.4%,-3.8%)
+      z-index: 20
+
+
+  &--text
+    position: relative
+    z-index: 25
+    border-radius: 10px
+    background-color: rgba(255,255,255,0.7)
+
+
+
+/*States

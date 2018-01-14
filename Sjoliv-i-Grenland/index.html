@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sjøliv i Grenland</title>
+
+		<script src="skript.js"></script>
+		<link rel="stylesheet" type="text/css" href="stiler.css">
+	</head>
+	<body>
+		<header>
+			<h1>Sjøliv i Grenland</h1>
+			<div id="music-toggle"></div>
+			<audio id="music-background" autoplay loop>
+				<source src="lyder/sjolyd.mp3" type="audio/mpeg">
+				Din nettleser klarer ikke å spille av lyd engang. Er nok på tide med en oppgradering!
+			</audio>
+		</header>
+		<main>
+			<div class="ark">
+				<div id="bildeserie">
+					<div class="corner-label" data-label="2016"></div>
+				</div>
+				<div id="nautic-calculator">
+					<div>
+						<h3>Fra nautiske mil til kilometer</h3>
+						<div style="position: relative">
+							<input id="avstand--input" title="" type="number" min="0" required/>
+							<label for="avstand--input">Nautiske mil</label>
+						</div>
+						<div id="avstand--resultat" class="resultat"></div>
+					</div>
+					<div>
+						<h3>Beregnet tid fra gjennomsnittsfart</h3>
+						<div style="position: relative">
+							<input id="tid--input" title="" type="number" min="0" required/>
+							<label for="tid--input">Gjennomsnittsfart</label>
+						</div>
+						<div id="tid--resultat" class="resultat"></div>
+					</div>
+				</div>
+				<div id="guessing-game">
+					<div style="padding: 0 30px;">
+						<h3>Gjettespill</h3>
+						<p>Hvor nærme kan du gjette det til byen fra Langesund. Velg en by og begynn å gjett!</p>
+					</div>
+					<select title="" id="guessing-game--select">
+						<option selected disabled>Velg en by</option>
+					</select>
+					<div style="position: relative;">
+						<input id="guessing-game--input" title="" type="number" min="0" required/>
+						<label for="guessing-game--input">Din gjetting</label>
+						<button id="guessing-game--button">Gjett!</button>
+					</div>
+					<div id="guessing-game--resultat" class="resultat"></div>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

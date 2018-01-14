@@ -1,0 +1,162 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: lightblue;
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+    z-index: 10;
+    box-shadow: 0 0 8px black;
+}
+
+header > h1 {
+    text-align: right;
+    padding-right: 10%;
+}
+
+main {
+    padding: 120px 0;
+}
+
+.ark {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 800px;
+    background-color: floralwhite;
+    box-shadow: 1px 1px 5px black;
+    min-height: 100px;
+}
+
+#music-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 9px;
+    height: 20px;
+    border-right: 5px solid green;
+    border-left: 5px solid green;
+}
+
+#music-toggle.paused {
+    width: 0;
+    height: 0;
+    border-right: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid green;
+}
+
+input[type="number"] {
+    position: relative;
+    text-align: right;
+    width: 9em;
+}
+
+input[type="number"]:focus ~ label, input[type="number"]:valid ~ label {
+    top: -1.2em;
+    color: black;
+}
+
+label {
+    font-size: 0.8em;
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 3px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.resultat {
+    min-height: 1.2em;
+    width: 80%;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/*Oppgave 1 Bildegalleri*/
+
+#bildeserie {
+    margin: 0 auto;
+    width: 350px;
+    height: 300px;
+    background-image: none;
+    transition: background-image 0.8s ease-in-out;
+    box-shadow: 1px 1px 6px black;
+}
+
+.corner-label {
+    position: absolute;
+    width: 10%;
+    height: 0;
+    padding-bottom: 5.77%;
+    overflow: hidden;
+}
+
+.corner-label:after {
+    content: attr(data-label);
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    transform-origin: center center;
+    transform: translate(0, -50%) rotate(-30deg) translate(-2.5%, -50%);
+
+    box-sizing: border-box;
+    background: red;
+    border: 2px solid white;
+    box-shadow: 0 0 3px black;
+}
+
+
+/*Oppgave 2 Omregningskalkulator*/
+
+#nautic-calculator {
+    background: dodgerblue;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 6px black;
+    margin: 40px auto;
+    padding: 10px;
+    width: 350px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#nautic-calculator > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Oppgave 3 Program for å gjette avstand*/
+
+#guessing-game {
+    margin: 40px auto;
+    width: 350px;
+    height: 400px;
+    background-color: deepskyblue;
+    box-shadow: 1px 1px 6px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+

@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hallo Sans", Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.lyd-veksler, .banner--lyd-veksler {
+  cursor: pointer;
+  padding: 2px 4px;
+  background: whitesmoke;
+  box-shadow: 1px 1px 3px black;
+  width: 20px;
+  height: 20px;
+  fill: green;
+}
+
+.lyd-veksler--spill {
+  visibility: hidden;
+}
+
+.lyd-veksler.pause > .lyd-veksler--pause, .pause.banner--lyd-veksler > .lyd-veksler--pause {
+  visibility: hidden;
+}
+
+.lyd-veksler.pause > .lyd-veksler--spill, .pause.banner--lyd-veksler > .lyd-veksler--spill {
+  visibility: visible;
+}
+
+input[type=text] {
+  width: 3em;
+  text-align: right;
+}
+
+input[type=text].er-gyldig {
+  background-color: lightgreen;
+}
+
+input[type=text].er-ugyldig {
+  background-color: red;
+}
+
+/*Oppgave 1 - Banner*/
+.banner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1000px;
+  height: 390px;
+  background: center center no-repeat;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+}
+
+.banner--tekst {
+  position: absolute;
+  font-size: 3em;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.banner--lyd-veksler {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+/*Oppgave 2 - Studie kalkulator*/
+.studiekalk {
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+  background: url(bilder/lektor1.jpg) center center no-repeat;
+  background-size: cover;
+}

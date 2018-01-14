@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+-->
+<html lang="nb">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AIR2010</title>
+		
+		<link rel="stylesheet" type="text/css" href="stiler.css">
+
+		<script src="libs/TweenMax.min.js"></script>
+		<script src="libs/eksamenslib.js"></script>
+
+		<script src="skript.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="flypassering" class="flypassering">
+				<audio id="flypassering--fly-lyd">
+					<source src="lyder/jetpass.mp3" type="audio/mpeg"/>
+				</audio>
+				<svg id="flypassering--lyd-veksler" class="flypassering--lyd-veksler" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid meet">
+					<path class="lyd-veksler--spill" d="M0 0 L1 0.5 L0 1 Z" />
+					<path class="lyd-veksler--pause" d="M0 0 L0.25 0 L0.25 1 L0 1 Z M0.75 0 L1 0 L1 1 L0.75 1 Z" />
+				</svg>
+				<img class="flypassering--fly" src="bilder/fly.png" alt="Fly" />
+			</div>
+			<ul class="nav">
+				<li class="nav--item"><a class="nav--item--link" href="index.html">Forside</a></li>
+				<li class="nav--item"><a class="nav--item--link" href="#">Flystevner</a></li>
+				<li class="nav--item"><a class="nav--item--link" href="#">Fly</a></li>
+				<li class="nav--item"><a class="nav--item--link" href="#">Avstander og hastigheter</a></li>
+				<li class="nav--item"><a class="nav--item--link" href="#">Kontakt oss</a></li>
+			</ul>
+		</header>
+		<main>
+			<div class="flykalk">
+				<h2>Fly kalkulator</h2>
+				<div class="flykalk--instrumenter">
+					<div class="flykalk--instrument hastighet">
+						<div class="overlay sirkel"></div>
+						<div class="flykalk--instrument--toggle"></div>
+						<div class="flykalk--instrument--tekst">Hvis man flyr i en hastighet på
+							<input id="flykalk--inn-knop" maxlength="5" type="text" placeholder="0"/> knop
+						   over en avstand på
+							<input id="flykalk--inn-avstand" maxlength="5" type="text" placeholder="0"/> km,
+							så vil man bruke
+							<strong><span id="flykalk--ut-timer">0</span></strong> timer og
+							<strong><span id="flykalk--ut-minutter">0</span></strong> minutter.
+						</div>
+					</div>
+					<div class="flykalk--instrument hoeyde">
+						<div class="overlay sirkel"></div>
+						<div class="flykalk--instrument--toggle"></div>
+						<div class="flykalk--instrument--tekst">Hvis man er
+						<input id="flykalk--inn-fot" maxlength="5" type="text" placeholder="0" /> fot
+						over bakken så tilsvarer det <strong><span id="flykalk--ut-meter">0</span></strong> meter.</div>
+					</div>
+					<div class="flykalk--instrument stigefartsmaaler"></div>
+				</div>
+			</div>
+			<div class="flytid">
+				<div class="flytid--tekst">
+					<h2>Flytid mellom flyplasser</h2>
+					Å fly fra
+					<select id="flytid--select-fra" class="flytid--destinasjoner">
+						<option selected disabled>Velg startsted</option>
+					</select>
+					til
+					<select id="flytid--select-til" class="flytid--destinasjoner">
+						<option selected disabled>Velg reisemål</option>
+					</select>
+					med hastigheten
+					<input id="flytid--inn-hastighet" maxlength="7" type="text" placeholder="0"/> knop i timen,
+					så vil det ta<br>
+					<strong><span id="flytid--ut-timer">0</span></strong> timer og
+					<strong><span id="flytid--ut-minutter">0</span></strong> minutter.
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

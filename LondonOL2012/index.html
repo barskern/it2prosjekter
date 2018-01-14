@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+  ______  __      ______  __    __  ______  ______  ______  __  __   __  ______  __  __  __  __  _____
+ /\  __ \/\ \    /\  ___\/\ "-./  \/\  __ \/\  == \/\__  _\/\ \/\ "-.\ \/\  == \/\ \/\ \/\ \/\ \/\  __-.
+ \ \ \/\ \ \ \___\ \  __\\ \ \-./\ \ \  __ \ \  __<\/_/\ \/\ \ \ \ \-.  \ \  __<\ \ \_\ \ \ \_\ \ \ \/\ \
+  \ \_____\ \_____\ \_____\ \_\ \ \_\ \_\ \_\ \_\ \_\ \ \_\ \ \_\ \_\\"\_\ \_\ \_\ \_____\ \_____\ \____-
+   \/_____/\/_____/\/_____/\/_/  \/_/\/_/\/_/\/_/ /_/  \/_/  \/_/\/_/ \/_/\/_/ /_/\/_____/\/_____/\/____/
+
+-->
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>OL London 2012</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/generelle.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/spesifikk.css" />
+    <script rel="script" type="text/javascript" src="skript.js"></script>
+</head>
+<body>
+    <header>
+        <img src="bilder/Logo.svg" />
+    </header>
+    <section>
+        <!--<menu></menu>-->
+        <main>
+            <article>
+                <div id="spydkast">
+                    <div id="flex1">
+                        <h2>Spydkastet</h2>
+                        <img src="bilder/OLRinger.svg" width="400px" height="400px" />
+                        <div id="tekst1"></div>
+                    </div>
+                    <div id="knapper1">
+                        <button id="gåtilbake">Gå tilbake<br/><strong><--</strong></button>
+                        <button id="gåfram">Gå fram<br/><strong>--></strong></button>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div id="andreas">
+                    <div id="overlay">
+                        <h3>Hvor langt kastet Andreas Thorkildsen i dette klippet?</h3>
+                        <input type="number" />
+                        <p>Klikk for å spille av klippet</p>
+                    </div>
+                    <video src="videoer/thorkildsen.mov" onclick="oppgave2(this);">Din nettleser støtter ikke videoer.</video>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <div class="tabellogpiler">
+                        <div class="circle sirkelpil" style="display:none;">
+                            <div class="arrow-left pil"></div>
+                        </div>
+                        <div id="tabeller">
+                            <table id="finaletabell" class="resultat_tabell"></table>
+                            <table id="superfinaletabell" class="resultat_tabell" style="display: none;"></table>
+                        </div>
+                        <div class="circle sirkelpil" style="display:none;">
+                            <div class="arrow-right pil"></div>
+                        </div>
+                    </div>
+                    <div id="knapper2">
+                        <button id="nyDeltaker">Ny deltaker</button>
+                        <button id="superfinaleknapp">Super finale</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+    <footer></footer>
+</body>
+</html>

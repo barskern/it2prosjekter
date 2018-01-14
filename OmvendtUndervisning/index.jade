@@ -1,0 +1,61 @@
+// Created by olru2 on 25.08.2015.
+doctype html
+html
+    head
+        meta(charset="UTF-8")/
+        title Omvendt Undervisning
+        link(href="stylesheets/style.css", rel="stylesheet")/
+        link(rel="icon", type="icon", href="favicon.ico")/
+        base(target="_blank")/
+
+    body
+        section
+            article
+                h1 Omvendt Undervisning
+                i Jostein Trondal
+
+                p Her er litt informasjon om Omvendt Undervisning.
+
+                p
+                    a(href="https://www.youtube.com/watch?v=DjsqyLrSoIM") Foredrag
+                    |  på 45 minutter om egne erfaringer med Omvendt Undervisning.
+
+                p
+                    a(href="https://signin.techsmith.com/?wa=wsignin1.0&wtrealm=https%3a%2f%2fwww.techsmith.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fdownload%252fcamtasia%252f&wct=2015-08-31T08%3a15%3a10Z&client_id=CA85C23B-DC70-4B23-90BF-6A10E7406F97&trial=true") Camstasia Studio
+                    |  - Et program for innspilling og redigering av screencasts.
+
+                p
+                    | Alternativ til Camstasia Studio;
+                    | &nbsp;
+                    a(href="http://www.techsmith.com/download/jing/") Jing
+                    |  (har ikke redigeringsmulighet)
+
+                p
+                    | Noen fag/prosjekter jeg har laget video til:
+                    | &nbsp;
+                    a(href="http://trondal.com/1p") Matematikk 1P,
+                    | &nbsp;
+                    a(href="http://trondal.com/r2") Matematikk R2,
+                    | &nbsp;
+                    a(href="http://trondal.com/fysikk1") Fysikk 1,
+                    | &nbsp;
+                    a(href="http://trondal.com/ma156") MA-156 Matematikk 2 for byggstudier,
+                    | &nbsp;
+                    a(href="http://trondal.com/latex") Innføring i typesetting med LaTeX.
+
+
+                p
+                    | Guo, P. J., Kim, J., og Rubin, R., 2014,
+                    | &nbsp;
+                    a(href="http://trondal.com/ou/GuoKimRubin2014.pdf") How Video Production Affects Student Engagement
+                    |  - An Empirical Study of MOOC Videos, ACM. <br />(With permission from Philip J. Guo)
+
+                h2 Hjelp til innspilling, redigering og opplasting av video
+
+                - var allInfo = [['Innspilling','2:46','https://www.youtube.com/watch?v=2ILe2dYL4vs&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=1'],['Redigering','7:21','https://www.youtube.com/watch?v=cfsFp0d6Al4&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=2'],['Redigering (kommentar)','1:35','https://www.youtube.com/watch?v=e7Il64rchPA&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=3'],['Mer redigering','14:28','https://www.youtube.com/watch?v=Hsic-Vm7gFw&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=4'],['Rendering','3:47','https://www.youtube.com/watch?v=S7cONVRo1q8&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=5'],['Opplasting','3:48','https://www.youtube.com/watch?v=gD1nMZdGfQw&list=PL2um6DTSYkN5Z9frg5aXNd1aND4agv4Ya&index=6']];
+
+                ol
+                    each info in allInfo
+                        li
+                            a(href= info[2] )= info[0]
+                            span= ' (' + info[1] + ')'
